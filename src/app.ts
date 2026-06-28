@@ -6,6 +6,7 @@ import  httpStatus from "http-status";
 import { prisma } from "./lib/prisma";
 import bcrypt from "bcryptjs";
 import { userRoutes } from "./modules/user/user.route";
+import { authRoutes } from "./modules/auth/auth.route";
 const app:Application=express();
 
 app.use(cors({
@@ -22,4 +23,5 @@ app.get("/",(req:Request,res:Response)=>{
     res.send("Hello world");
 })
 app.use("/api/users",userRoutes)
+app.use("/api/auth",authRoutes)
 export default app;

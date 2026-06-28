@@ -1,6 +1,6 @@
 enum ActiveStatus{
     ACTIVE
-    BLOCKEd
+    BLOCKED
 }
 enum Role{
     AUTHOR
